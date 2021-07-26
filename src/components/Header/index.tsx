@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import { Nav, NavLogo, IconLogo, TxtLogo, NavLink, IconLink, NavMenu, NavIconTimes, NavIconBars, NavBtn, NavBtnLink, NavContainer  } from './styles';
 import useBreakpoint from '../../_customHooks/useBreakpoint';
+import { Modal } from '../Modal';
+import { useModal } from '../../_customHooks/useModal';
+import { Login } from '../../pages/Login';
 
 export const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const handleClick = () => setMobileMenu(!mobileMenu);
   const point = useBreakpoint();
-  
+  const { isShown, toggle } = useModal();
+
   return (
     <>
       <Nav>
@@ -27,10 +31,12 @@ export const Header = () => {
           </NavLink>    
           <NavLink to="/series"> 
             Seriados 
-          </NavLink>     
+          </NavLink>            
           <NavBtn>
-            <NavBtnLink> Login </NavBtnLink>
-          </NavBtn>          
+            <NavBtnLink onClick={toggle}> Login </NavBtnLink>
+            <Modal isShown={isShown} hide={toggle} modalContent={<Login/>} 
+    headerText="Login" />
+          </NavBtn>              
         </NavMenu>) : null}
         </ NavContainer>
       </Nav>

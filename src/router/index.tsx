@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
@@ -10,6 +9,7 @@ import { Movies } from '../pages/Movies';
 import { Series } from '../pages/Series';
 
 export const Router = () => {
+  
   return (
     <BrowserRouter>
       <Header />

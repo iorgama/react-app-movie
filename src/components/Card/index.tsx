@@ -4,6 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import { useTheme } from 'styled-components';
 import { Button } from '../Forms/Button';
 import {Box, ImgBx, Img, Details, TitleCard, CardWrapper, SubTitleCard, ButtonCard, ButtonLink, ImgCardWrapper, InfoWrapper, ImgCard, InfoCardWrapper, TextCard } from './style';
+import imageNotFound from '../../assets/images/image-not-found.png';
 
 interface CardItemProps {
   image ?: string
@@ -51,7 +52,8 @@ export const Card : FC<CardItemProps> = ({title, cardStyle, plot, id, image, yea
     <>
     {cardStyle === 'md' ? (<Box>
       <ImgBx>
-        <Img src={URL_IMAGE+image} alt={title}/>
+      {console.log(image)}
+        <Img src={image ? URL_IMAGE+image : imageNotFound} alt={title}/>
       </ImgBx>
       <Details>
         <TitleCard data-for="main" data-tip={title}>
@@ -73,7 +75,7 @@ export const Card : FC<CardItemProps> = ({title, cardStyle, plot, id, image, yea
     </Box>)
     : <CardWrapper>
         <ImgCardWrapper>
-          <ImgCard src={URL_IMAGE+image} alt={title}/>
+          <ImgCard src={image ? URL_IMAGE+image : imageNotFound} alt={title}/>
         </ImgCardWrapper>
         <InfoWrapper>
           <TextCard>{fixDate(year)}</TextCard>

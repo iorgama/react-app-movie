@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import { Container } from '../../styles/globalStyle'
 import { useTheme } from 'styled-components';
 import { Section, Box } from './style';

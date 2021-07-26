@@ -107,7 +107,7 @@ export const NavBtn = styled.nav`
   margin-right: 24px;
 `;
 
-export const NavBtnLink = styled.a`
+export const NavBtnLink = styled.button`
   border-radius: ${props => props.theme.borderRadius};
   background: ${props => props.theme.palette.primary};
   padding: 10px 22px;
@@ -117,6 +117,7 @@ export const NavBtnLink = styled.a`
   transition: all 0.5s ease-in-out;
   text-decoration: none;
   margin-left: 24px;
+  font-size: 1.2rem;
   &:hover {
     transition: all 0.5s ease-in-out;
     background: ${props => props.theme.palette.common};

@@ -14,7 +14,7 @@ export const Input: FC<InputProps> = ({ id, name, setValue, ...props }) => {
   const handleBlur: React.FocusEventHandler<HTMLInputElement> = ({target: t}) =>{
     setError(null);
     if(t.value.length === 0){
-      setError("*Preencha o campo para pesquisar!");
+      setError("*Preencha o campo!");
     }
   }
   
