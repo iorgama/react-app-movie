@@ -2,11 +2,11 @@ import {useState, useEffect} from 'react'
 import { Container } from '../../styles/globalStyle'
 import { useTheme } from 'styled-components';
 import { Section, Box } from './style';
-import { getMoviesPaginate } from '../../services/MovieApi';
 import { Card } from '../../components/Card';
 import { Error } from '../../components/Error';
 import { Title } from '../../components/Text/Title';
 import { LottieAnimation } from '../../components/Lotties';
+import { getMoviesPaginate } from '../../services/MovieApi/getMoviesPaginate';
 
 interface MoviesProps{
   id: string,

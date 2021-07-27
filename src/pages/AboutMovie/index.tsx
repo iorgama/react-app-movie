@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom';
 import { Card } from '../../components/Card';
-import { getMovieById } from '../../services/MovieApi';
+import { getMovieById } from '../../services/MovieApi/getMovieById';
 import { Container } from '../../styles/globalStyle';
 import { Box, Title } from './style';
 

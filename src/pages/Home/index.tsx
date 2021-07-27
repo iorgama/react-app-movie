@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
 import {Container} from '../../styles/globalStyle';
 import { useTheme } from 'styled-components';
-import { getMovies } from '../../services/MovieApi';
 import { MovieSection, MovieBanner,SearchSection, SearchFlex, Box } from './style'
 import { Card } from '../../components/Card';
 import { Button } from '../../components/Forms/Button';
 import { Input } from '../../components/Forms/Input';
 import { Error } from '../../components/Error';
 import { useAppContext } from '../../context/MyContext';
+import { getMovies } from '../../services/MovieApi/getMovies';
 
 interface MoviesProps{
   id: string,
