@@ -19,7 +19,7 @@ interface CardItemProps {
 
 export const Card : FC<CardItemProps> = ({title, cardStyle, plot, id, image, year, showButton, seriesOrMovies}) => {
 
-  const URL_IMAGE = process.env.REACT_APP_IMAGE_API_URL;
+  const URL_IMAGE = process.env.REACT_APP_VERCEL_IMAGE_API_URL;
   const Theme = useTheme();
   const history = useHistory();
 
