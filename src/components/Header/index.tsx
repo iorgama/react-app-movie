@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { Nav, NavLogo, IconLogo, TxtLogo, NavLink, IconLink, NavMenu, NavIconTimes, NavIconBars, NavBtn, NavBtnLink, NavContainer  } from './styles';
 import useBreakpoint from '../../_customHooks/useBreakpoint';
 import { Modal } from '../Modal';
-import { useModal } from '../../_customHooks/useModal';
 import { Login } from '../../pages/Login';
+import { useModalContent } from '../../context/ModalContext';
 
 export const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const handleClick = () => setMobileMenu(!mobileMenu);
   const point = useBreakpoint();
-  const { isShown, toggle } = useModal();
+  const { isShown, toggle } = useModalContent();
 
   return (
     <>

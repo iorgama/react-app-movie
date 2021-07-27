@@ -52,7 +52,6 @@ export const Card : FC<CardItemProps> = ({title, cardStyle, plot, id, image, yea
     <>
     {cardStyle === 'md' ? (<Box>
       <ImgBx>
-      {console.log(image)}
         <Img src={image ? URL_IMAGE+image : imageNotFound} alt={title}/>
       </ImgBx>
       <Details>

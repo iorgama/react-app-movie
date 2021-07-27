@@ -6,6 +6,7 @@ import { AboutMovie } from '../pages/AboutMovie';
 import { AboutSerie } from '../pages/AboutSerie';
 import { Home } from '../pages/Home';
 import { Movies } from '../pages/Movies';
+import { NotFound } from '../pages/NotFound';
 import { Series } from '../pages/Series';
 
 export const Router = () => {
@@ -31,6 +32,9 @@ export const Router = () => {
           </Route>
           <Route path="/about-series/:id">
             <AboutSerie />
+          </Route>          
+          <Route path="*">
+            <NotFound />
           </Route>
       </Switch>
       <Footer />   

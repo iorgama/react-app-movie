@@ -1,9 +1,14 @@
-import React from 'react'
+import { Container } from '../../styles/globalStyle';
+import { SVG, Wrapper } from './style';
+import { useTheme } from 'styled-components';
 
 export const NotFound = () => {
+  const Theme = useTheme();
   return (
-    <div>
-      <h1>Página não encontrada</h1>
-    </div>
+    <Container>
+      <Wrapper>
+        <SVG />       
+      </Wrapper>
+    </Container>
   )
 }

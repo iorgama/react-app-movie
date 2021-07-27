@@ -5,6 +5,7 @@ import { Router } from "./router";
 
 
 import AppContextProvider from './context/MyContext';
+import ModalContextProvider from './context/ModalContext';
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <ThemeProvider theme={defaultTheme}>
         <GlobalStyle />  
         <AppContextProvider>
-          <Router/>
+          <ModalContextProvider>
+            <Router/>
+          </ModalContextProvider>
         </AppContextProvider>
       </ThemeProvider>
     </>
