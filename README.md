@@ -5,7 +5,6 @@ Projeto desenvolvido durante o curso da TargetTrust de React Js. O objetivo foi 
 ## Bibliotecas e tecnologias utilizadas:
 
 - Styled components
-- Swiper
 - React Router Dom
 - Lottie
 - Axios
