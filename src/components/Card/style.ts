@@ -15,7 +15,7 @@ export const ImgBx = styled.div`
   top: 10px;
   left: 10px;
   right: 10px;
-  bottom: 120px; 
+  bottom: 10px;
 `
 
 export const Img = styled.img`
@@ -34,12 +34,14 @@ export const Details = styled.div`
   bottom: 10px;
   height: 100px;
   text-align: center;
+  background-color: ${props => props.theme.palette.common}; 
+  opacity: 0.8;
 `
 
 export const TitleCard = styled.h2`
   margin: 0;
   padding: 0;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 1.25rem;
   color: ${props => props.theme.palette.secondary}; 
   text-transform: uppercase;
